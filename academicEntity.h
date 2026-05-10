@@ -7,13 +7,15 @@ class AcademicEntity{
     string id;
     string email;
     public:
-    AcademicEntity(string name, string id, string email){
+    AcademicEntity(string name  , string id , string email  ){
         this->name = name;
         this->id  = id;
         this->email = email;
     }
+    AcademicEntity(){
+        
+    }
     virtual ~AcademicEntity(){
-
     }
     virtual void displayProfile() = 0;
 
