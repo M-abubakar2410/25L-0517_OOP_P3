@@ -5,14 +5,12 @@
 using namespace std;
 class Student : public AcademicEntity{
 private:
-    double gpa;
     string dept;
     string status;
     int enrolledCount;
     char**EnrolledCourse;
 public:
-    Student( double gpa = 0.0 , string dept = ""  ,string status = "" ,int count ,char ** course)  {
-        this->gpa = gpa;
+    Student(  string dept  ,string status  ,int count ,char ** course)  {
         this->dept = dept;
         this->status = status;
         enrolledCount = count;
@@ -26,9 +24,7 @@ public:
     Student(){
 
     }
-    double getGpa(){
-        return gpa;
-    }
+
     void setStatus(const char * s){
         status = s;
     }
@@ -42,4 +38,7 @@ public:
     string Getstatus(){
         return status;
     }
+    virtual void displayProfile() = 0;
+    virtual double CalculateGpa() = 0;
+    virtual void ViewTranscript() = 0;
 };
