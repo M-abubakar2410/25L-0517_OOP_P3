@@ -2,18 +2,26 @@
 #include"Student.h"
 #include<iostream>
 using namespace std;
+ 
 class RegularStudent : public Student{
-    private:
-    double Gpa;
 public:
-    RegularStudent(double g = 0.0){
+    // your original constructor kept exactly
+    RegularStudent(){
         setStatus("Regular");
-        Gpa = g;
     }
-    double CaclculateGpa(double * points, int * CrHr, int ){
-        
+ 
+    // when we have all the info at once
+    RegularStudent(string name, string id, string email, string dept){
+        SetName(name);
+        SetId(id);
+        SetEmail(email);
+        setDept(dept);
+        setStatus("Active");
     }
-    ~RegularStudent(){
-        
+ 
+    // after adding a grade we recalculate gpa right away
+    void displayProfile() override {
+        cout << "[Regular Student]" << endl;
+        Student::displayProfile();
     }
 };
