@@ -1,9 +1,16 @@
 #include<iostream>
+#include"academicEntity.h"
+#include"Student.h"
+#include"Teacher.h"
+#include"Scholarship.h"
+#include"Regular.h"
+#include"Exchange.h"
+#include"Assessment.h"
+#include"Quiz.h"
+#include"Assignment.h"
+#include"Exam.h"
 using namespace std;
 int main(){
-    int x;
-    x = 8;
-    cout<<x;
     cout<<endl;
     system("pause");
     return 0;
